@@ -1,31 +1,30 @@
-Author, Basename, URL
-RealBadAngel, technic_game, https://github.com/minetest-technic/technic_game/
-Calinou, carbone-ng, https://github.com/Calinou/carbone-ng/
-BlockMen, wasteland, https://github.com/BlockMen/Wasteland/
-fishyWET, Lord-of-the-Test, https://github.com/minetest-LOTT/Lord-of-the-Test/
-Dan Duncombe, realtest, https://github.com/VanessaE/realtest_game/
-Splizard, hungry_games, https://github.com/Splizard/hungry_games/
-jojoa1997, overcraft_origins, https://github.com/jojoa1997/overcraft_origins/
-BlockMen, minetest_plus, https://github.com/BlockMen/minetest_plus/
-Thermal_Shock, decoblocks, http://www.mediafire.com/download/6fj8p2a3kfv4ruf/Decoblocks+R5.zip
-Bas080, OCD, https://github.com/bas080/OCD/
-HeroOfTheWinds, sky-test, https://github.com/HeroOfTheWinds/Sky-Test-game/
-Krock, base_game, https://github.com/SmallJoker/base_game/
-Casimir, voxelgarden, https://github.com/CasimirKaPazi/Voxelgarden/
-Miner59, test_the_beast, https://github.com/Jeija/minetest-mod-jumping
-Jordach, big_freaking_dig, https://github.com/Jordach/big_freaking_dig/
-Neuromancer, eden, https://www.dropbox.com/s/6ffixmwwgmybdqp/NeuromancerGame20130925.zip
-Wuzzy, tutorial, https://repo.or.cz/w/minetest_tutorial_subgame/
-BrandonReese, adventuretest, https://github.com/Bremaweb/adventuretest/
-Mito551, dwarves, https://github.com/mito551/dwarves_game/
-cornernote, skyblock, https://github.com/cornernote/minetest-skyblock/
-nater6927, roman_test, https://dl.dropboxusercontent.com/s/y4xrfjlwj8b20bw/Roman%20Test.zip?dl=1&token_hash=AAFNlOJg3QoOv2n76n_iC_XcMXvQAMFO6aNlixPix2f2Jw&expiry=1399733558
-PilzAdam, minimal, https://github.com/PilzAdam/minimal/
-PilzAdam, minitest, https://github.com/PilzAdam/MiniTest/
-Megaf, rpi, https://github.com/Megaf/RPi/
-Dan Duncombe, nostalgia, https://github.com/VanessaE/mt_nostalgia/
-qznc, famish, https://github.com/qznc/famish/
-Josh, minetest, https://dl.dropbox.com/u/102401091/Cubes%20%5BGame%5D.zip
-tonyka, avatar, https://github.com/tony-ka/minetest-Avatar/
-jordan4ibanez, techduck, https://dl.dropbox.com/s/0xnj1yajlsqcjmo/tech_n_mine.zip?dl=1
-Bas080, simple, https://github.com/bas080/simple/
+Author, Basename, URL, Title, ForumTopic
+RealBadAngel, technic_game, https://github.com/minetest-technic/technic_game/, [Game] Technic [technic_game] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=6412
+HeroOfTheWinds, sky-test, https://github.com/HeroOfTheWinds/Sky-Test-game/, [Game] Sky-Test [0.5] [beta] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=9255
+Jordach, big_freaking_dig, https://github.com/Jordach/big_freaking_dig/, [Game] Big Freaking Dig [0.5] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=9036
+Wuzzy, tutorial, https://repo.or.cz/w/minetest_tutorial_subgame/, [Game]/[World] Tutorial [1.8.0] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=10192
+Miner59, test_the_beast, https://github.com/Jeija/minetest-mod-jumping, [game] Test the beast [v.0.3] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=12180
+fishyWET, Lord-of-the-Test, https://github.com/minetest-LOTT/Lord-of-the-Test/, [Game] Lord Of The Rings Game [Lord-of-the-Test] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=5578
+Dan Duncombe, realtest, https://github.com/VanessaE/realtest_game/, [Game] Realtest Revamped [github rolling release] [realtest] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=7573
+Splizard, hungry_games, https://github.com/Splizard/hungry_games/, [Game] The Hungry Games [hungry_games] [0.4] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=4582
+cornernote, skyblock, https://github.com/cornernote/minetest-skyblock/, [Game] Skyblock [skyblock] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=2799
+BlockMen, minetest_plus, https://github.com/BlockMen/minetest_plus/, [Game] Minetest+ [minetest_plus] [0.9.1] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=6244
+Thermal_Shock, decoblocks, http://www.mediafire.com/download/6fj8p2a3kfv4ruf/Decoblocks+R5.zip, [Game] Decoblocks [R5] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=6420
+Calinou, carbone-ng, https://github.com/Calinou/carbone-ng/, [Game] Carbone NG [carbone-ng] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=12824
+Krock, base_game, https://github.com/SmallJoker/base_game/, [Game] BASE [base_game] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=9647
+BlockMen, wasteland, https://github.com/BlockMen/Wasteland/, [Game] Wasteland [0.3] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=7243
+Bas080, OCD, https://github.com/bas080/OCD/, [Game] OCD [beta] [OCD] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=6636
+Neuromancer, eden, https://www.dropbox.com/s/6ffixmwwgmybdqp/NeuromancerGame20130925.zip, [Game] Eden (formerly Immersive Fun) - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=7027
+PilzAdam, minitest, https://github.com/PilzAdam/MiniTest/, [Game] MiniTest - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=2589
+BrandonReese, adventuretest, https://github.com/Bremaweb/adventuretest/, [Game] Adventuretest [Alpha] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=9184
+Casimir, voxelgarden, https://github.com/CasimirKaPazi/Voxelgarden/, [Game] Voxelgarden [git] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=6346
+Mito551, dwarves, https://github.com/mito551/dwarves_game/, [Game] Dwarves [dwarves] [github] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=3003
+nater6927, roman_test, https://dl.dropboxusercontent.com/s/y4xrfjlwj8b20bw/Roman%20Test.zip?dl=1&token_hash=AAFNlOJg3QoOv2n76n_iC_XcMXvQAMFO6aNlixPix2f2Jw&expiry=1399733558, [Game] Roman Test [0.1] beta - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=9256
+PilzAdam, minimal, https://github.com/PilzAdam/minimal/, [Game] Minimal [minimal] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=3441
+Bas080, simple, https://github.com/bas080/simple/, [Game] Simple [simple] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=3242
+tonyka, avatar, https://github.com/tony-ka/minetest-Avatar/, [Game] Avatar - a world inspired by the moon Pandora - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=2845
+Josh, minetest, https://dl.dropbox.com/u/102401091/Cubes%20%5BGame%5D.zip, [Game] Cubes [minetest] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=3298
+jordan4ibanez, techduck, https://dl.dropbox.com/s/0xnj1yajlsqcjmo/tech_n_mine.zip?dl=1, [Game] Techduck - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=3174
+Megaf, rpi, https://github.com/Megaf/RPi/, [Game] RPi - Free your Art (A lightweight game) - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=9192
+qznc, famish, https://github.com/qznc/famish/, [Game] Famish [0.3] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=6012
+Dan Duncombe, nostalgia, https://github.com/VanessaE/mt_nostalgia/, [Game] Minetest Nostalgia (customised a bit) [0.0.5] - Minetest Forums, http://forum.minetest.net/viewtopic.php?f=15&t=6977

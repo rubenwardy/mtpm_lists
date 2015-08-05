@@ -1,4 +1,4 @@
-import urllib2, time, threading, re, sys
+import urllib2, time, threading, re, sys, os
 from bs4 import BeautifulSoup
 
 def findFirstClassRec(parent, tagt, classt):
@@ -120,13 +120,55 @@ def get_download(basename, content):
 	else:
 		return None
 
-def do_work(pm, url):
+def get_url(url):
+	filename = "tmp/" + url.replace("http://forum.minetest.net/viewtopic.php?", "") \
+		.replace("&", "_").replace("=", "_")
+
+	if os.path.isfile(filename):
+		html = ""
+		with open (filename, "r") as myfile:
+			html = myfile.read().replace('\n', '')
+
+		soup = BeautifulSoup(html, 'html.parser')
+		if soup and soup.title:
+			return soup
+
+
+	print >> sys.stderr, "\033[93mFetching " + url + " anew\033[0m"
+
+	try:
+		handle = urllib2.urlopen(url)
+	except:
+		print >> sys.stderr, "\033[91mFatal URLError\033[0m"
+		return
+
 	# Download and parse
-	handle = urllib2.urlopen(url)
+	if not handle:
+		print >> sys.stderr, "\033[91mUnable to download page\033[0m"
+		return
+
 	html = ""
 	for line in handle:
 		html += line
+
+	with open (filename, "w") as myfile:
+		 myfile.write(html)
+
 	soup = BeautifulSoup(html, 'html.parser')
+	if not soup:
+		print >> sys.stderr, "\033[91mHTML parser failed fatally\033[0m"
+		return
+	elif not soup.title:
+		print >> sys.stderr, "\033[91mTitle missing from page\033[0m"
+		return
+	else:
+		return soup
+
+
+def do_work(pm, url):
+	soup = get_url(url)
+	if not soup:
+		return
 
 	# Read title
 	basename = pm.get_basename(soup, url)
@@ -153,7 +195,11 @@ def do_work(pm, url):
 	# Get download
 	download = get_download(basename, content)
 	if download:
-		return name.text + ", " + basename + ", " + download
+		res = name.text + ", " + basename + ", " + download + ", " + \
+			soup.title.text.replace("- minetest forums", "").strip() \
+			 	.replace(",", "") + \
+				", " + url
+		return re.sub(r'[^\x00-\x7F]',' ', res)
 	else:
 		print >> sys.stderr, "\033[91mUnable to find a download for " +  basename + "\033[0m"
 		return
@@ -220,14 +266,19 @@ class ParserManager:
 		for tag in topics.find_all("li"):
 			if not "sticky" in tag['class']:
 				count = count + 1
-				self.todo.append(tag.find("a")['href'].replace("./", "http://forum.minetest.net/"))
+
+				tmp = tag.find("a")['href'].replace("./", "http://forum.minetest.net/")
+				idx = tmp.find("&sid")
+				if idx:
+					tmp = tmp[:idx]
+				self.todo.append(tmp)
 
 		print>> sys.stderr, "\033[94mAdded " + str(count) + " new topics to the todo list.\033[0m"
 
 		return True
 
 	def run(self):
-		print("Author, Basename, URL")
+		print("Author, Basename, URL, Title, ForumTopic")
 
 		threads = []
 		while self.populate_todo():
@@ -236,9 +287,12 @@ class ParserManager:
 
 				if len(threads) < self.max_threads:
 					url = self.todo.pop(0)
-					t = threading.Thread(target=parse_topic, args=(self, url,))
-					threads.append(t)
-					t.start()
+					if self.max_threads == 1:
+						parse_topic(self, url)
+					else:
+						t = threading.Thread(target=parse_topic, args=(self, url,))
+						threads.append(t)
+						t.start()
 				else:
 					time.sleep(0.1)
 
