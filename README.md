@@ -1,5 +1,5 @@
-# Minetest Mod Forum Parser
-Parsers the Minetest forums to retrieve mod download links.
+# MTPM Lists
+A collection of package lists and parsers to create those package lists.
 
 	$ sudo pip install beautifulsoup4
 	$ python update.py > mods.csv
