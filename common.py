@@ -23,21 +23,29 @@ def is_url_blacklisted(url):
 		".html",
 		"postimg.org",
 		"lut.im",
+		"iconarchive.com",
 
-		# Wrong links
+		# Forum links
 		"forum.minetest.net/profile.php",
+		"minetest.net/forum/profile.php",
+		"github.com/minetest/minetest",
 		"viewtopic.php",
+		"viewforum.php",
+
+		# Licenses
 		"creativecommons.org",
 		"gnu.org",
 		"sam.zoy.org",
 		"wtfpl.net",
-		"github.com/minetest/minetest",
+
+		# Help links
 		"wiki.minetest.com",
 		"wiki.minetest.net",
 		"dev.minetest.net",
-		"viewforum.php",
 		"wikipedia.org",
 		"wikia.com",
+		"lua-users.org",
+		"xkcd.com",
 
 		# Dead sites
 		"ubuntuone.com",
