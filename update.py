@@ -14,21 +14,32 @@ def findFirstClassRec(parent, tagt, classt):
 
 def is_url_blacklisted(url):
 	blacklist = [
+		# Wrong formats
 		"youtube.com",
-		"forum.minetest.net/viewtopic.php",
-		"forum.minetest.net/profile.php",
-		"ubuntuone.com",
-		"minetest.net/forum/viewtopic.php",
-		"minetest.net/forum/profile.php",
 		"imgur.com",
 		"mediacru.sh",
 		"pasteboard.co",
+		".png",
+		".html",
+		"postimg.org",
+		"lut.im",
+
+		# Wrong links
+		"forum.minetest.net/profile.php",
+		"viewtopic.php",
 		"creativecommons.org",
 		"gnu.org",
 		"sam.zoy.org",
+		"wtfpl.net",
 		"github.com/minetest/minetest",
-		".png",
-		".html"
+		"wiki.minetest.com",
+		"wiki.minetest.net",
+		"dev.minetest.net",
+
+		# Dead sites
+		"ubuntuone.com",
+		"ompldr.org",
+		"04.jp.org"
 	]
 
 	for item in blacklist:
@@ -38,7 +49,7 @@ def is_url_blacklisted(url):
 	return False
 
 def validate_basename(s):
-	basename_blacklist = ["mod", "modpack"]
+	basename_blacklist = ["mod", "modpack", "git", "github", "game", "subgame"]
 	if s.lower() in basename_blacklist:
 		return False
 
@@ -72,7 +83,7 @@ def get_download(basename, content):
 		ghpat = re.compile(r'(github.com|gitorious.com|bitbucket.org|gitlab.com|repo.or.cz)/([A-Za-z0-9_\-]+)/([A-Za-z0-9_\-]+)')
 		match = re.search(ghpat, url, flags=0)
 		if match and match.group(1) and match.group(2) and match.group(3):
-			if basename in match.group(3).strip().lower():
+			if basename.lower() in match.group(3).strip().lower():
 				return "https://" + match.group(1) + "/" + \
 						match.group(2) + "/" + match.group(3) + "/"
 
