@@ -36,12 +36,21 @@ def is_url_blacklisted(url):
 		"wiki.minetest.net",
 		"dev.minetest.net",
 		"viewforum.php",
+		"wikipedia.org",
+		"wikia.com",
 
 		# Dead sites
 		"ubuntuone.com",
 		"ompldr.org",
 		"04.jp.org"
 	]
+
+	exact_blacklist = [
+		"http://lordofthetest.se/"
+	]
+
+	if url in exact_blacklist:
+		return False
 
 	for item in blacklist:
 		if item in url:
@@ -51,8 +60,11 @@ def is_url_blacklisted(url):
 
 def validate_basename(s):
 	basename_blacklist = ["mod", "modpack", "git", "github", "game", "subgame",
-		"alpha", "beta", "wip", "done", "v1", "v2", "v3"]
+		"alpha", "beta", "wip", "done", "world"]
 	if s.lower() in basename_blacklist:
+		return False
+
+	if len(s) <= 2:
 		return False
 
 	number = 0
@@ -63,7 +75,7 @@ def validate_basename(s):
 		if not c.isalnum() and c != "-" and c != "_" and c != ".":
 			return False
 
-	if number > 0.8 * len(s):
+	if number > 0.5 * len(s):
 		return False
 
 	return True

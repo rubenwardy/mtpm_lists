@@ -1,7 +1,5 @@
 import common, re
 
-
-
 def get_basename(soup, url):
 	title = soup.title.text
 	pattern = re.compile(r'\[([A-Za-z0-9_\- ]+)\]')
@@ -11,6 +9,8 @@ def get_basename(soup, url):
 			return match
 
 	title = title.lower().replace("[game]", "")
+	title = title.lower().replace("[world]", "")
+	title = title.lower().replace("/", "")
 	title = title.replace("- minetest forums", "")
 	#title = title.replace("minetest", "")
 	title = title.split("[", 1)[0]
