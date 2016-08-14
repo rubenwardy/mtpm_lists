@@ -6,4 +6,4 @@ A collection of package lists and parsers to create those package lists.
 	$ python update_subgames.py > lists/subgames.csv
 
 Written by rubenwardy.  
-License: WTFPL
+License: MIT
